@@ -8,5 +8,8 @@ document.write("\"Be who you are and say what you feel,"
                 +" because those who mind don't matter and those who matter don't mind.\""
                 +"-Dr Seuss");
 
-var concString = "Hard eee "+"harrrrr."
-document.write("<br><br>"+concString+"<br><br>")
+var concString = "Hard eee "+"harrrrr.";
+document.write("<br><br>"+concString+"<br><br>");
+
+var Family = "The Johnsons", Dad = "Joe", Mom = "Sylvia", Daughter = "Penny", Son = "Zorro";
+document.write(Dad);
