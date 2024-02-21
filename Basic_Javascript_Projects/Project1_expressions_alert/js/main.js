@@ -7,3 +7,6 @@ document.write("<br><br>Lisa told Bart, \"Knock it off, Bart! Or I'll tell dad!\
 document.write("\"Be who you are and say what you feel,"
                 +" because those who mind don't matter and those who matter don't mind.\""
                 +"-Dr Seuss");
+
+var concString = "Hard eee "+"harrrrr."
+document.write("<br><br>"+concString+"<br><br>")
