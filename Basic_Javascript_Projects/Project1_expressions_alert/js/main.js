@@ -12,4 +12,5 @@ var concString = "Hard eee "+"harrrrr.";
 document.write("<br><br>"+concString+"<br><br>");
 
 var Family = "The Johnsons", Dad = "Joe", Mom = "Sylvia", Daughter = "Penny", Son = "Zorro";
-document.write(Dad);
+document.write(Dad+" is: ");
+document.write(3 * 18); // basic expression
