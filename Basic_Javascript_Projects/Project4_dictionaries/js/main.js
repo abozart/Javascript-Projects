@@ -1,11 +1,4 @@
 function dict(){
-    var animal = {
-        species:'dog',
-        color:'black',
-        breed:'lab',
-        age:5,
-        sound:'BARK!'
-    }
     var uObject = {
         type:'star',
         type: 7.5, //lightyears across
@@ -13,8 +6,8 @@ function dict(){
         age:5.3, //billions of years
         sound:'WHOOOOSH!'
     }
-    delete uObject.sound;
-    document.getElementById('dictionary').innerHTML = JSON.stringify(uObject);
+    delete uObject.sound; //delete object property
+    document.getElementById('dictionary').innerHTML = JSON.stringify(uObject); //stringify obj via JSON
 }
 
 
