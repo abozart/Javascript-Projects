@@ -39,6 +39,10 @@ function allops(){
     var exp = num1 * num2 + 99 - 384;
     document.getElementById('math5').innerHTML = num1+" * "+num2+"  + 99 - 384 = "+ exp 
 }
+
+function random(){
+    return Math.round(Math.random()*100);
+}
 //REMAINDER
 var remainder = 66 % 4
 var math = 64 / 4;
@@ -60,6 +64,13 @@ var Y = 5;
 Y--;
 document.write('<br><br>');
 document.write('Y(5) decremented: '+Y);
+
+document.write('<br><br>');
+document.write('Random # * 100: '+(Math.random()*100));
+document.write('<br>Random #: '+Math.random());
+document.write('<br><br>random() function (between 1-100)<br>');
+document.write(random());
+
 
 
 
