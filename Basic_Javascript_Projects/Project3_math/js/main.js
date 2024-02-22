@@ -37,5 +37,11 @@ function allops(){
 
 var remainder = 66 % 4
 var math = 64 / 4;
-document.write('<br><br>wooo:')
+document.write('<br><br>');
 document.write('66 / 4 = '+math+' & remainder = '+remainder);
+
+var num3 = 46;
+var neg = -num3;
+document.write('<br><br>');
+document.write(num3 + ' negated: '+neg);
+
