@@ -1,4 +1,4 @@
-function Fart(decibels,smell,date,farter) {
+/* function Fart(decibels,smell,date,farter) {
     this.fart_decibels = decibels;
     this.fart_smell = smell;
     this.fart_date = date;
@@ -16,4 +16,14 @@ function myFunc(){
     document.getElementById('keywords_constructors').innerHTML = JSON.stringify(fart_index);
 }
 
-// var typeof = 3323; //assigned reserved keyword to var
+// var typeof = 3323; //assigned reserved keyword to var */
+
+function counter(){
+    document.getElementById('counting').innerHTML = Count();
+    function Count(){
+        var startingPoint = 9;
+        function Plus_one(){ startingPoint += 1; }
+        Plus_one();
+        return startingPoint;
+    }
+}
