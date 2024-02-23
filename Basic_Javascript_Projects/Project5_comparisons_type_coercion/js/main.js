@@ -3,6 +3,6 @@ function checkNaN(input){
 }
 
 document.write('<br><br>');
-document.write(2E33);
+document.write(1 > 2E33);
 document.write("<BR>")
-document.write(-2E33233);
+document.write(4 > -2E33233);
