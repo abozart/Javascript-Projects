@@ -1,12 +1,19 @@
-function checkAge(){
-    console.log('wafawffawfwa')
-    var height, can_ride;
-    height = document.getElementById('height').value;
-    can_ride = (height < 18) ? 'No you can\'t!!!':'Yes you can!';
-    document.getElementById('canI').innerHTML = can_ride;
+function Fart(decibels,smell,date,farter) {
+    this.fart_decibels = decibels;
+    this.fart_smell = smell;
+    this.fart_date = date;
+    this.fart_farter = farter;
 }
 
+var Joe = new Fart('.2','8/10','01/01/1998','Joe B');
+var Clarissa = new Fart('.9','3/10','4/15/2009','Clarissa D.');
 
-  function clear2() {
-    alert('clear2');
-  }
+var fart_index = [];
+fart_index.push(Joe);
+fart_index.push(Clarissa);
+
+function myFunc(){
+    document.getElementById('keywords_constructors').innerHTML = JSON.stringify(fart_index);
+}
+
+// var typeof = 3323; //assigned reserved keyword to var
