@@ -3,5 +3,5 @@ function checkNaN(input){
 }
 
 
-document.log(1 > 2E33);
-document.log(4 > -2E33233);
+console.log(1 > 2E33);
+console.log(4 > -2E33233);
