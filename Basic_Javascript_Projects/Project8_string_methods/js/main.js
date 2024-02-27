@@ -3,6 +3,7 @@
 //      .concat(str2, str3, str4...)
 //      .slice(0,-3) #remove first and last 3 chars
 //      .toUpperCase()
+//      .toLowerCase()
 /*
 
 function full_sentence(){
@@ -34,9 +35,9 @@ if(searchStr > -1){
 */
 
 //  NUMBER METHODS
-//      .concat(str2, str3, str4...)
-//      .slice(0,-3) #remove first and last 3 chars
-//      .toUpperCase()
+//      .toString()         #convert datatype from number into string
+//      .slice(0,-3)        #remove first and last 3 chars
+//      .toPrecision(8)     #trim number to first 8 digits
 
 function numToStr(){
     var X = 182;
@@ -45,4 +46,9 @@ function numToStr(){
     var Y = X.toString()
     console.log(typeof(Y))
     console.log(Y)
+}
+
+function number_precision(){
+    var X = 18252.219412757;
+    document.getElementById('output').innerHTML = X.toPrecision(4);
 }
