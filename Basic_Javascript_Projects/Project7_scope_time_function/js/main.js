@@ -1,4 +1,4 @@
-/* SCOPE CHALLENGE
+// SCOPE CHALLENGE
 
 var global_var = 5;
 
@@ -11,8 +11,6 @@ myFunc();
 
 console.log(local_var) // inaccessible because its in a function
 
-END SCOPE CHALLENGE */
-
 // IF STATEMENT
 if (4 != 10){
     console.log('numbers are not equal')
@@ -21,13 +19,14 @@ if (4 != 10){
 
 // DATE
 function getHours(){
-    var hourCompare = document.getElementById('num').value;
-    var currentHour = new Date().getHours();
-    if(currentHour < hourCompare){
-        var msg = 'It\'s before '+hourCompare+'00.';
+    var currentHour = new Date().getHours(); //GET CURRENT HOUR
+    if(currentHour < 12 == currentHour > 0){
+        var msg = "It's breakfast time!";
+    }else if (currentHour >= 12 == currentHour < 18){
+        var msg = "It's tea time! "
     }else{
-        var msg = 'It\'s past '+hourCompare+'00'
+        var msg = "It's dinner time."
     }
-    document.getElementById('output').innerHTML = msg+'<br>Time = '+currentHour+'<br>Compare time = '+hourCompare;
+    document.getElementById('output').innerHTML = msg+'<br>Time = '+currentHour;
 }
 // END DATE
