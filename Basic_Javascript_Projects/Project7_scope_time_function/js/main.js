@@ -20,13 +20,14 @@ if (4 != 10){
 // END IF STATEMENT
 
 // DATE
-function get_hours(hourCompare){
+function getHours(){
+    var hourCompare = document.getElementById('num').value;
     var currentHour = new Date().getHours();
     if(currentHour < hourCompare){
         var msg = 'It\'s before '+hourCompare+'00.';
     }else{
         var msg = 'It\'s past '+hourCompare+'00'
     }
-    document.getElementById('greeting').innerHTML = msg+' Time = '+currentHour+' : Compare time = '+hourCompare;
+    document.getElementById('output').innerHTML = msg+'<br>Time = '+currentHour+'<br>Compare time = '+hourCompare;
 }
 // END DATE
