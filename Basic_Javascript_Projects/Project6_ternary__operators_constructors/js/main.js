@@ -1,8 +1,10 @@
 function ternary(){
-    console.log('wafawffawfwa')
+
     var num1 = document.getElementById('num1').value;
     var num2 = document.getElementById('num2').value;
+    console.log(num1 + ' : '+num2);
     var numTest = (num1 > num2) ? 'First # is larger!':'Second # is larger.';
+    console.log(numTest)
     document.getElementById('numResult').innerHTML = numTest
 }
 
