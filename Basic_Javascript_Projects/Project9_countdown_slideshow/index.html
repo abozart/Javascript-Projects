@@ -6,16 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Project8: string_methods assignment</title>
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
 
-    <script src="./js/main.js"></script>
 
   </head>
   <body>
 
-    <p>How many seconds would you like to set your alarm for?</p>
-    <input id="seconds" value="">
-    <button id="button" onclick="countdown()">Click Here!</button>   
-    <p id="timer">output</p>
-    
+
+    <div class="slideshow-container">
+      <p>Image Slideshow</p>
+      <div class="mySlides fade">
+        <img src="./img/img1.jpg" alt="" style="width: 100%;">
+        <div class="text">Moderate waterfall.</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="./img/img2.jpg" alt="" style="width: 100%;">
+        <div class="text">Cabin on a lake in winter.</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="./img/img3.jpg" alt="" style="width: 100%;">
+        <div class="text" style="color: black;">My retirement.</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="./img/img4.jpg" alt="" style="width: 100%;">
+        <div class="text">Tree soldiers.</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+    <br>
+    <div style="text-align: center;">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <div class="general-container">
+      <p>How many seconds would you like to set your alarm for?</p>
+      <input id="seconds" value="">
+      <button id="button" onclick="countdown()">Click Here!</button>   
+      <p id="timer">output</p>
+    </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
