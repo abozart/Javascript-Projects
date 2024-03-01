@@ -88,7 +88,7 @@ img{vertical-align: middle; border-radius: 10px 10px 10px 10px;}
 }
 
 .active, .dot:hover{
-    background-color: #717171;
+    background-color: #3865ee;
 }
 
 /* FADING ANIMATION */
