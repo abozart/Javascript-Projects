@@ -66,22 +66,27 @@ function object_method(){
 }
 
 
-function break_func(){
-    var text = new String;
-    for (let i = 0; i < 10; i++) {
-        if (i === 3) { break; }
-        text += "The number is " + i + "<br>";
+function break_func(){ // Example using BREAK
+    var output = new String;
+    for (let i = 0; i < 10; i++) { // FOR Loop
+        if (i === 5) { break; }
+        output += i + ", ";
       }
-      console.log(text);
-      document.getElementById('break_continue').innerHTML = text;
+      console.log(output);
+      document.getElementById('break_continue').innerHTML = output;
       
 }
-function continue_func(){
-    var text = new String;
-    for (let i = 0; i < 10; i++) {
-        if (i === 3) { continue; }
-        text += "The number is " + i + "<br>";
+function continue_func(){ // Example using CONTINUE
+    var output = new String;
+    let i = 0;
+    while (i < 10) { // WHILE Loop
+        let index = i;
+        i++; //had to put this @ the beginning otherwise result is infinite loop because "continue" will skip over adding the increment
+        if (index === 5) { continue; }
+        output += index + ", ";
       }
-      console.log(text);
-      document.getElementById('break_continue').innerHTML = text;
+      console.log(output);
+      document.getElementById('break_continue').innerHTML = output;
 }
+
+
