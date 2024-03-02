@@ -19,12 +19,6 @@ function array_func(){
     document.getElementById('array').innerHTML = random_item(myArray);
 }
 
-function random_item(items) {
-    // Use Math.random() to generate a random number between 0 and 1,
-    // multiply it by the length of the array, and use Math.floor() to round down to the nearest integer
-    return items[Math.floor(Math.random() * items.length)];
-}
-
 //constant example
 function constant_func(){
     //const dude = "Hey Dude!";
@@ -40,10 +34,17 @@ function constant_func(){
 }
 
 //let, block scope
-let X = 325;
+var X = 325;
 console.log(X)
 if(1==1){
     let X = 75;
     console.log(X)
 }
-console.log(X)
+console.log(X);
+
+// return statement
+function random_item(items) {
+    // Use Math.random() to generate a random number between 0 and 1,
+    // multiply it by the length of the array, and use Math.floor() to round down to the nearest integer
+    return items[Math.floor(Math.random() * items.length)];
+}
