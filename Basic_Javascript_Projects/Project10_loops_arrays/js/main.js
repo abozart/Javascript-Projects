@@ -38,3 +38,12 @@ function constant_func(){
 
     document.getElementById('constant').innerHTML = JSON.stringify(dudeObj);
 }
+
+//let, block scope
+let X = 325;
+console.log(X)
+if(1==1){
+    let X = 75;
+    console.log(X)
+}
+console.log(X)
