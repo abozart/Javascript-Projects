@@ -35,8 +35,17 @@ function color_func(){
 console.log(document.getElementsByClassName('class1')[2].innerHTML);
 
 window.onload = function(){
-    const canvas = document.getElementById('scream-canvas');
-    const ctx = canvas.getContext('2d');
+    const img_canvas = document.getElementById('scream-canvas');
+    const ctx = img_canvas.getContext('2d');
     const img = document.getElementById('scream-img');
     ctx.drawImage(img,10,10);
+
+    const gradient_canvas = document.getElementById('gradient');
+    const ctx2 = gradient_canvas.getContext("2d");
+    const grd = ctx2.createLinearGradient(0,0,170,0);
+    grd.addColorStop(0,'black');
+    grd.addColorStop(1,'red');
+
+    ctx2.fillStyle = grd;
+    ctx2.fillRect(20,20,260,110);
 }

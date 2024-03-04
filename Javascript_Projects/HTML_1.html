@@ -9,17 +9,20 @@
 
     <script src="./js/javascript_1.js" defer></script>
     <style>
-      .canvas-node-content { margin-top: -.5rem; }
+      .canv-cont { padding: 1em; float:left;}
     </style>
   </head>
   <body>
     <input id="color_input" type="text">
     <button onclick='color_func()'>Submit Color</button>
-    <p id="switch_output">stuff here</p>
-    <span class="class1">meh</span> <span class="class1">pfft</span> <span class="class1">hrrumph</span>
-    <div>
+    <p id="switch_output">color output here</p>
+    <div><span class="class1">meh</span> <span class="class1">pfft</span> <span class="class1">hrrumph</span></div>
+    <div class="canv-cont">
       <img id="scream-img" width="220" height="277" src="./img/scream.jpg" alt="The Scream" style="display: none;">
-      <canvas id="scream-canvas" width="240" height="297" style="border:3px solid black"></canvas>
+      <canvas id="scream-canvas" width="240" height="297" style="border:3px solid black;"></canvas>
+    </div>
+    <div class="canv-cont">
+      <canvas id="gradient" width="300" height="150" style="border:1px dashed black;"></canvas>
     </div>
   </body>
 </html>
