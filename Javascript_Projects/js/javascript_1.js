@@ -31,3 +31,5 @@ function color_func(){
     x.style.fontWeight = "bold";
     document.getElementById('switch_output').innerHTML = color_output;
 }
+
+console.log(document.getElementsByClassName('class1')[2].innerHTML);
