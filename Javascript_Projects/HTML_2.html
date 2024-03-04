@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./css/css_1.css">
+    <title>forms</title>
+
+    <script src="./js/javascript_2.js" defer></script>
+    <style>
+      .canv-cont { padding: 1em; float:left;}
+    </style>
+  </head>
+  <body>
+    <input id="color_input" type="text">
+    <button onclick='color_func()'>Submit Color</button>
+    <p id="switch_output">color output here</p>
+    <div><span class="class1">meh</span> <span class="class1">pfft</span> <span class="class1">hrrumph</span></div>
+    <div class="canv-cont">
+      <img id="scream-img" width="220" height="277" src="./img/scream.jpg" alt="The Scream" style="display: none;">
+      <canvas id="scream-canvas" width="240" height="297" style="border:3px solid black;"></canvas>
+    </div>
+    <div class="canv-cont" >
+      <canvas id="gradient" width="300" height="150" style="border:1px dashed black;"></canvas>
+    </div>
+
+    <div id="form" class="clearfix">
+      <h1>Form:</h1>
+      <div>
+        <form action="" method="post">
+          <input class="contact" type="text" placeholder="First Name">
+          <input class="contact" type="text" placeholder="Last Name">
+          <input class="contact" type="email" placeholder="Email">
+          <input class="contact" type="tel" placeholder="Phone">
+          <div>
+            <input type="submit" value="Submit" onclick="return checkForm()">
+          </div>
+          <div id="msg-outbox">
+            <div id="errors">Error(s) [0]</div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </body>
+</html>
