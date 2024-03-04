@@ -33,3 +33,10 @@ function color_func(){
 }
 
 console.log(document.getElementsByClassName('class1')[2].innerHTML);
+
+window.onload = function(){
+    const canvas = document.getElementById('scream-canvas');
+    const ctx = canvas.getContext('2d');
+    const img = document.getElementById('scream-img');
+    ctx.drawImage(img,10,10);
+}
