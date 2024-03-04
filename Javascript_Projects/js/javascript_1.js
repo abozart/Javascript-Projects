@@ -42,7 +42,7 @@ window.onload = function(){
 
     const gradient_canvas = document.getElementById('gradient');
     const ctx2 = gradient_canvas.getContext("2d");
-    const grd = ctx2.createLinearGradient(0,0,170,0);
+    const grd = ctx2.createLinearGradient(20,0,250,0);
     grd.addColorStop(0,'black');
     grd.addColorStop(1,'red');
 

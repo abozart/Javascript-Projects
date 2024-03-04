@@ -1,0 +1,19 @@
+body{
+    background-color: #1c1c1c;
+    color: white;
+}
+input.contact{
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid dashed;
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgba(124, 8, 8, 0.7);
+    color: white;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
