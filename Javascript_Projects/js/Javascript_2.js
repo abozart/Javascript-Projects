@@ -32,8 +32,6 @@ function color_func(){
     document.getElementById('switch_output').innerHTML = color_output;
 }
 
-console.log(document.getElementsByClassName('class1')[2].innerHTML);
-
 window.onload = function(){
     const img_canvas = document.getElementById('scream-canvas');
     const ctx = img_canvas.getContext('2d');
@@ -67,7 +65,7 @@ function checkForm(){
         document.getElementById('errors').innerHTML = "Error(s) ["+msgArr.length+"]<br><br>Please fill in the following fields: "+missing_fields; //output error msgs
         return false;
     }else{
-        alert('no errors, your form was submitted!')
+        alert('no errors, your form was submitted!  ')
     }
 
 }
