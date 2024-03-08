@@ -31,4 +31,16 @@ canvas{
 
 h1#heading{
     text-align: center;
+    color: white;
+    filter: drop-shadow(2px 2px 3px #7dbeff);
+    font-weight: 900;
+}
+body{
+    background-color: rgba(26, 26, 26, 0.82);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgba(26, 26, 26, 0.82)
+}
+
+img{
+    
 }
