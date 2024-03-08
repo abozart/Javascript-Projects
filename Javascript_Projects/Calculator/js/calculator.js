@@ -1,6 +1,6 @@
 // secondOperand NOT DEFINED YET
 
-alert('foo')
+
 //Create an obj to keep track of values
 const calculator = {
     //This will display 0 on the calculator screen.
