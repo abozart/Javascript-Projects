@@ -125,4 +125,9 @@ keys.addEventListener('click', (event) => {
     }
     inputDigit(target.value);
     updateDisplay();
-})
+});
+
+window.addEventListener('resize', function(event) {
+    document.getElementById('xwidth').innerHTML = window.innerWidth;
+    document.getElementById('xheight').innerHTML = window.innerHeight;
+}, true);

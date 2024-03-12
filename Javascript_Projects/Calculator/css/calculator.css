@@ -1,4 +1,4 @@
-h1#heading{
+h1{
     text-align: center;
     color: white;
     filter: drop-shadow(2px 2px 3px #7dbeff);
@@ -29,6 +29,7 @@ html{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 500px;
+    
 }
 
 .calculator-screen{
@@ -93,3 +94,12 @@ button:hover{
     grid-gap: 20px;
     padding: 20px;
 }
+
+/*
+@media (max-width: 544px){
+    .calculator {
+        position: relative;
+        top: 300px;
+    }
+}
+*/
