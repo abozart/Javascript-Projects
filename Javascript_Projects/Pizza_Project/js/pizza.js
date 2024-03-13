@@ -36,8 +36,16 @@ function getTopping(runningTotal,text1){
     var toppingArray = document.getElementsByClassName('toppings');
     
     for(var j = 0; j < toppingArray.length; j++){
-        console.log('selected topping item: ('+toppingArray[j].value+')');
-        text1 = text1+toppingArray[j].value+"<br>";
+        //console.log('selected topping item: ('+toppingArray[j].value+')');
+        //console.log('++++++++++++++++++++++++++++')
+        if(toppingArray[j].checked) {
+            toppingTotal++;
+            console.log('selected topping item: ('+toppingArray[j].value+')');
+            selectedTopping.push(toppingArray[j].value);
+            text1 = text1+toppingArray[j].value+"<br>";
+        }
+        
+        
     };
 
     var toppingCount = selectedTopping.length;
@@ -46,7 +54,7 @@ function getTopping(runningTotal,text1){
     }else{
         toppingTotal = 0;
     }
-    runningTotal = (runningTotal + toppingCount);
+    runningTotal = (runningTotal + toppingTotal);
     console.log('total selected topping items: '+toppingCount);
     console.log(toppingCount+" topping - 1 free topping = $"+toppingTotal+".00");
     console.log('purchase total: $'+runningTotal+'.00');

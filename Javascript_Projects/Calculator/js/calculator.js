@@ -1,4 +1,4 @@
-// secondOperand NOT DEFINED YET
+// KEYPRESSES WORK ON #'S ONLY, CURRENTLY NOT OPERATORS LIKE ADD/SUBTRACT
 
 
 //Create an obj to keep track of values
@@ -7,7 +7,7 @@ const calculator = {
     displayValue: '0',
     //This will hold the first operand for any expressions, but we set it to null for now.
     firstOperand: null,
-    //This checks whether or not the second operand has been inputted by the user
+    //This checks whether or not the second operand has been input by the user
     waitSecondOperand: false,
     //This will hold the operator, we set it to null for now
     operator: null
@@ -131,3 +131,52 @@ window.addEventListener('resize', function(event) {
     document.getElementById('xwidth').innerHTML = window.innerWidth;
     document.getElementById('xheight').innerHTML = window.innerHeight;
 }, true);
+
+
+
+addEventListener("keypress", (e) => {
+    
+    var useCase = '';
+    console.log()
+    console.log(e.key)
+    if(!isNaN(e.key)) useCase = 'number';
+    else if(e.key == '+' || e.key=='-' || e.key == '/' || e.key == '*' ) useCase == 'operator';
+    switch(e.key) {
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+            document.getElementById(e.key).click();
+          // code block
+          console.log('+++++++++ NUMBER +++++++++++');
+          console.log("The key was: " + e.key)
+          break;
+        case '+':
+        case '-':
+        case '/':
+        case '*':
+        case '=':
+            var operation = null;
+            if(e.key = '+') operation = "add";
+            if(e.key = '-') operation = "subtract";
+            if(e.key = '*') operation = "multiply";
+            if(e.key = '/') operation = "divide";
+            if(e.key = '=') operation = "equal";
+          // code block
+          console.log('+++++++++ OPERATION +++++++++++')
+          console.log("The key was: " + e.key)
+          console.log(operation)
+          document.getElementById(operation).click();
+          break;
+        default:
+          // code block
+      } 
+});
+
+
