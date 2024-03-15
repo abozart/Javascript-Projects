@@ -139,8 +139,9 @@ addEventListener("keypress", (e) => {
     var useCase = '';
     console.log()
     console.log(e.key)
-    if(!isNaN(e.key)) useCase = 'number';
-    else if(e.key == '+' || e.key=='-' || e.key == '/' || e.key == '*' ) useCase == 'operator';
+    //if(!isNaN(e.key)) useCase = 'number';
+    //if(e.key == '+' || e.key=='-' || e.key == '/' || e.key == '*' ) useCase == 'operator';
+    
     switch(e.key) {
         case '0':
         case '1':
@@ -169,9 +170,9 @@ addEventListener("keypress", (e) => {
             if(e.key = '/') operation = "divide";
             if(e.key = '=') operation = "equal";
           // code block
-          console.log('+++++++++ OPERATION +++++++++++')
-          console.log("The key was: " + e.key)
-          console.log(operation)
+          console.log('+++++++++ OPERATION +++++++++++');
+          console.log("The key was: " + e.key);
+          console.log(operation);
           document.getElementById(operation).click();
           break;
         default:
