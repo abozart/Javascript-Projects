@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Basic AJAX Demo</title>
+        <title>AJAX Demo</title>
 		<link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -19,8 +19,10 @@
             ajax.open('GET','content.html');
             // Step three: define the ajax response callback method
             ajax.onreadystatechange = function(){
+                console.log('ajax state change');
+                console.log(ajax.readyState)
                 if(ajax.readyState == 4){
-                    document.getElementById('content').innerHTML = ajax.responseText;
+                    document.getElementById('content').innerHTML = ajax.responseText; //replace content div with responseText
                 }
             }
             // Step four: send the ajax req for data
