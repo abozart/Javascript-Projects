@@ -4,3 +4,4 @@ document.body.appendChild(h1);
 
 console.log(JSON.stringify($("html")[0].outerHTML))
 
+$('h1').hide(1000)
