@@ -4,26 +4,57 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="./js/javascript_1.js">
-    <title>switch statement</title>
+    <link rel="stylesheet" type="text/css" href="./css/css_1.css">
+    <title>switch statement / vw units /fade in</title>
 
-    <script src="./js/javascript_1.js" defer></script>
+    <script type="text/javascript" src="./js/javascript_1.js" defer></script>
+    <script type="text/javascript" src="./basic_jQuery/jquery-latest.min.js"></script>
     <style>
       .canv-cont { padding: 1em; float:left;}
     </style>
   </head>
   <body>
-    <input id="color_input" type="text">
-    <button onclick='color_func()'>Submit Color</button>
-    <p id="switch_output">color output here</p>
-    <div><span class="class1">meh</span> <span class="class1">pfft</span> <span class="class1">hrrumph</span></div>
-    <div class="canv-cont">
-      <img id="scream-img" width="220" height="277" src="./img/scream.jpg" alt="The Scream" style="display: none;">
-      <canvas id="scream-canvas" width="240" height="297" style="border:3px solid black;"></canvas>
+    <div id="body">
+    </div> 
+
+    <div class="fullscreen a">  
+      <input id="color_input" type="text">
+      <button onclick='color_func()'>Submit Color</button>
+      <p id="switch_output">color output here</p>
+      <div><span class="class1">meh</span> <span class="class1">pfft</span> <span class="class1">hrrumph</span></div>
+      <div class="canv-cont">
+        <img id="scream-img" width="220" height="277" src="./img/scream.jpg" alt="The Scream" style="display: none;">
+        <canvas id="scream-canvas" width="240" height="297" style="border:3px solid black;"></canvas>
+      </div>
+      <div class="canv-cont">
+        <canvas id="gradient" width="300" height="150" style="border:1px dashed black;"></canvas>
+      </div>
     </div>
-    <div class="canv-cont">
-      <canvas id="gradient" width="300" height="150" style="border:1px dashed black;"></canvas>
-    </div>
-    
+
   </body>
+  <script type="text/javascript">
+    var opacity=1; 
+    var intervalID=0; 
+    window.onload=fadeout();
+    
+        function fadeout(){ 
+            setInterval(hide, 100); 
+            
+        } 
+    function hide(){ 
+        var body=document.getElementById("body"); 
+        opacity = Number(window.getComputedStyle(body).getPropertyValue("opacity")) 
+
+            if(opacity<=1){ 
+              //alert('qoooo')
+                opacity=opacity-0.1; 
+                        body.style.opacity=opacity 
+            } 
+            if (opacity == -0.1){ 
+              body.style.opacity=0;
+              body.style.display='none';
+                clearInterval(intervalID); 
+            } 
+        } 
+    </script>
 </html>
