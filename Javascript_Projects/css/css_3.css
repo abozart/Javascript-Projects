@@ -1,6 +1,15 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #1c1c1c;
     color: white;
+    padding-bottom: 550px;
+}
+
+.section{
+    padding: 50px;
 }
 
 .clearfix::after {
