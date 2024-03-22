@@ -4,8 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="./css/css_1.css">
-    <title>forms / form challenge</title>
+    <link rel="stylesheet" type="text/css" href="./css/css_2.css">
+    <title>forms / form challenge / form popup / CSS @keyframes</title>
 
     <script src="./js/javascript_2.js" defer></script>
     <style>
@@ -43,5 +43,28 @@
       </div>
     </div>
     <div class="clearfix"></div>
+
+    <button id="open" class="open-button" onclick="openForm()">Open Form</button>
+    <div class="form-popup" id="myForm">
+      <form action="#" class="form-container">
+        <h1>Login</h1>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      function openForm(){
+        document.getElementById('myForm').style.display = 'block';
+        document.getElementById('open').style.display = 'none';
+      }
+      function closeForm(){
+        document.getElementById('myForm').style.display = 'none';
+        document.getElementById('open').style.display = 'block';
+      }
+    </script>
+    <div id="movingRect">Hi!<br>Hey!<br>You!</div>
   </body>
 </html>
