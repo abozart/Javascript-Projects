@@ -61,6 +61,7 @@ input.contact{
     bottom: 20px;
     right: 25px;
     width: 290px;
+    z-index: 100;
 }
 
 /* The popup form, hidden by default */
@@ -140,3 +141,26 @@ input.contact{
     to { top: 100vh}
 }
 /***************** END KEYFRAMES ANIMATION FORM *****************/
+
+
+  /* STICKY ELEMENT */
+  div.sticky{
+    position: -webkit-sticky; /*Safari*/
+    position: sticky;
+    top: 0;
+    background-color: rgba(85, 107, 47,.7);
+    padding: 15px;
+    font-size: 20px;
+    z-index: 99;
+    text-transform: capitalize;
+  }
+  /* END STICKY ELEMENT */
+
+  #blank{
+    position: relative;
+    height: 750px;
+}
+
+#canv-container{
+    margin-top: 40px;
+}

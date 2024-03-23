@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="./css/css_2.css">
-    <title>forms / form challenge / form popup / CSS @keyframes-</title>
+    <title>HTML_2</title>
 
     <script src="./js/javascript_2.js" defer></script>
     <style>
@@ -13,17 +13,27 @@
     </style>
   </head>
   <body>
+    <p style="color:white">examples for: <br>
+      forms / <br>
+      form challenge / <br>
+      form popup / <br>
+      CSS @keyframes / <br>
+      Sticky Element Opens Form</p>
     <input id="color_input" type="text">
     <button onclick='color_func()'>Submit Color</button>
     <p id="switch_output">color output here</p>
     <div><span class="class1">meh</span> <span class="class1">pfft</span> <span class="class1">hrrumph</span></div>
-    <div class="canv-cont">
-      <img id="scream-img" width="220" height="277" src="./img/scream.jpg" alt="The Scream" style="display: none;">
-      <canvas id="scream-canvas" width="240" height="297" style="border:3px solid black;"></canvas>
+    <div class="sticky">Here's a sticky friggen element. <button type="button" onclick="openForm()">Open</button> & <button type="button" onclick="closeForm()">Close</button></div>
+    <div id="canv-container">
+      <div class="canv-cont">
+        <img id="scream-img" width="220" height="277" src="./img/scream.jpg" alt="The Scream" style="display: none;">
+        <canvas id="scream-canvas" width="240" height="297" style="border:3px solid black;"></canvas>
+      </div>
+      <div class="canv-cont" >
+        <canvas id="gradient" width="300" height="150" style="border:1px dashed black;"></canvas>
+      </div>
     </div>
-    <div class="canv-cont" >
-      <canvas id="gradient" width="300" height="150" style="border:1px dashed black;"></canvas>
-    </div>
+
 
     <div id="form" class="clearfix">
       <h1>Form:</h1>
@@ -44,6 +54,7 @@
     </div>
     <div class="clearfix"></div>
 
+    <!-- POPUP FORM -->
     <button id="open" class="open-button" onclick="openForm()">Open Form</button>
     <div class="form-popup" id="myForm">
       <form action="#" class="form-container">
@@ -54,8 +65,13 @@
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
       </form>
     </div>
+    <!-- END POPUP FORM -->
+
+    <div id="blank">blank space</div>
 
     <script type="text/javascript">
+
+      /* POPUP FORM JS */
       function openForm(){
         document.getElementById('myForm').style.display = 'block';
         document.getElementById('open').style.display = 'none';
@@ -64,7 +80,10 @@
         document.getElementById('myForm').style.display = 'none';
         document.getElementById('open').style.display = 'block';
       }
+      /* END POPUP FORM JS */
     </script>
+    <!-- ANIMATED BOX -->
     <div id="movingRect">Hi!<br>Hey!<br>You!</div>
+    <!-- END ANIMATED BOX -->
   </body>
 </html>
