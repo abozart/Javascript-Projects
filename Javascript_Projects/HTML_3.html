@@ -3,11 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>data atrribute / zoom image / HTML Bookmarks & Smooth Scrolling</title>
-    <script src="./js/javascript_3.js" defer></script>
+    <title>HTML_3</title>
+    <script type="text/javascript" src="./basic_jQuery/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="./js/javascript_3.js" defer></script>
     <link rel="stylesheet" type="text/css" href="./css/css_3.css">
   </head>
   <body>
+    <p>Examples of: <br>
+      data atrribute / <br>
+      zoom image / <br>
+      HTML Bookmarks & Smooth Scrolling / <br>
+      Automated Slideshow
+    </p>
     <span><a href="#Sec2">Section 2</a> | <a href="#Sec3">Section 3</a> | <a href="#Sec4">Section 4</a></span>
     <ol>
       <li onclick="displayMood(this)" data-mood="sour">Doug</li>
@@ -16,17 +23,45 @@
       <li onclick="displayMood(this)" data-mood="happy">Andreas</li>
     </ol>
 
-    <div class="img-hover-zoom--colorize">
+    <!-- SLIDESHOW -->
+    <div id="slideshow" class="floatme">
+      <div><img src="./img/1 Umgh7KVC2bL0fjM1szwj6A.jpg" alt=""></div>
+      <div><img src="./img/1 Umgh7KVC2bL0fjM1szwj6aA.jpg" alt=""></div>
+      <div><img src="./img/active-galactic-nucleus-5017.jpg" alt=""></div>
+      <div><img src="./img/composite-image-of-NGC-1068-777x818.webp" alt=""></div>
+      <div><img src="./img/image1.jpg" alt=""></div>
+    </div>
+    <!-- END SLIDESHOW -->
+
+    <!-- IMAGE ZOOM / COLORIZE -->
+    <div class="img-hover-zoom--colorize floatme clearfix">
       <img src="./img/scream.jpg" alt="This zooms-in really well and smooth">
     </div>
-    <div id="Sec2" class="section">Section 2
-      <p>content and stuff</p>   
+    <div id="extra-sections" class="clearfix">
+      <div id="Sec2" class="section">Section 2
+        <p>content and stuff</p>   
+      </div>
+      <div id="Sec3" class="section">Section 3
+        <p>content and stuff</p>   
+      </div>
+      <div id="Sec4" class="section">Section 4
+        <p>content and stuff</p>   
+      </div>
     </div>
-    <div id="Sec3" class="section">Section 3
-      <p>content and stuff</p>   
-    </div>
-    <div id="Sec4" class="section">Section 4
-      <p>content and stuff</p>   
-    </div>
+    <!-- END IMAGE ZOOM / COLORIZE -->
+
+    <!-- SLIDESHOW SCRIPT -->
+    <script type="text/javascript">
+      $('#slideshow > div:gt(0)').hide();
+
+      setInterval(function(){
+        $('#slideshow > div:first')
+          .fadeOut(1000)
+          .next()
+          .fadeIn(1000)
+          .end()
+          .appendTo('#slideshow');
+      }, 3000);
+    </script>
   </body>
 </html>
