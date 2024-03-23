@@ -71,3 +71,9 @@ body{
   #extra-sections{
     margin-top:400px;
   }
+
+  /* Large rounded green border */
+hr.bigbluehr {
+    border: 10px solid rgb(2, 0, 128);
+    border-radius: 5px;
+  }
