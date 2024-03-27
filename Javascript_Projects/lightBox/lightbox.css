@@ -124,12 +124,16 @@ body {
 }
 
 h2{ 
+  text-align: center;
   color: white;
+  filter: drop-shadow(2px 2px 3px #7dbeff);
+  font-weight: 900;
 }
 
-img {
+.column > img {
   margin-bottom: -4px;
   width:100%;
+  opacity: .8;
 }
 
 img.hover-shadow{
@@ -159,3 +163,14 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(255,255,255, 0.2), 0 6px 20px 0 rgba(255,255,255, 0.19);
 }
+
+/*
+.column{  background-color: black; }
+.column img{  opacity: .8 }
+.column:hover { animation: fadeIn 2s; }
+
+@keyframes fadeIn {
+  0% { opacity: .5; }
+  100% { opacity: 1; }
+}
+*/

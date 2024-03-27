@@ -1,3 +1,6 @@
+/* Functionality includes ability to use left/right arrows to
+   skip through images, or any other button to close modal. */
+
 function openModal() {
   document.getElementById("myModal").style.display = "block";
 }
@@ -41,10 +44,15 @@ document.addEventListener("keydown", keyPress, false);
 function keyPress(e) {
   var keyCode = e.keyCode;
   if(keyCode==37) {
-    alert("You hit the left.");
+    //alert("You hit the left.");
+    if(document.getElementById('myModal').style.display == 'block'){
+      plusSlides(-1);
+    }
   } else if (keyCode ==39){
-    alert("You hit the right.");
+    if(document.getElementById('myModal').style.display == 'block'){
+      plusSlides(1);
+    }
   } else {
-    //alert("Oh no you didn't.");
+    closeModal()
   }
 }
