@@ -1,4 +1,4 @@
-// KEYPRESSES WORK ON #'S ONLY, CURRENTLY NOT OPERATORS LIKE ADD/SUBTRACT
+// FUNCTIONALITY WORKS WITH BOTH KEYPRESS AND KEYPAD
 
 
 //Create an obj to keep track of values
@@ -108,6 +108,8 @@ keys.addEventListener('click', (event) => {
     if(target.classList.contains('operator')){
         //alert('2')
         handleOperator(target.value);
+        console.log('----------FUNC-----------');
+        console.log(target.value)
         updateDisplay();
         return;
     }
@@ -127,6 +129,8 @@ keys.addEventListener('click', (event) => {
     updateDisplay();
 });
 
+document.getElementById('xwidth').innerHTML = window.innerWidth;
+document.getElementById('xheight').innerHTML = window.innerHeight;
 window.addEventListener('resize', function(event) {
     document.getElementById('xwidth').innerHTML = window.innerWidth;
     document.getElementById('xheight').innerHTML = window.innerHeight;
@@ -135,12 +139,6 @@ window.addEventListener('resize', function(event) {
 
 
 addEventListener("keypress", (e) => {
-    
-    var useCase = '';
-    console.log()
-    console.log(e.key)
-    //if(!isNaN(e.key)) useCase = 'number';
-    //if(e.key == '+' || e.key=='-' || e.key == '/' || e.key == '*' ) useCase == 'operator';
     
     switch(e.key) {
         case '0':
@@ -154,29 +152,23 @@ addEventListener("keypress", (e) => {
         case '8':
         case '9':
             document.getElementById(e.key).click();
+            // code block
+            console.log('+++++++++ NUMBER +++++++++++');
+            console.log("The key was: " + e.key)
+            break;
+
+        default:
           // code block
-          console.log('+++++++++ NUMBER +++++++++++');
-          console.log("The key was: " + e.key)
-          break;
-        case '+':
-        case '-':
-        case '/':
-        case '*':
-        case '=':
             var operation = null;
-            if(e.key = '+') operation = "add";
-            if(e.key = '-') operation = "subtract";
-            if(e.key = '*') operation = "multiply";
-            if(e.key = '/') operation = "divide";
-            if(e.key = '=') operation = "equal";
+            if(e.key == '+') { operation = "add"; }
+            else if(e.key == '-') operation = "subtract";
+            else if(e.key == 'x') operation = "multiply";
+            else if(e.key == '/') operation = "divide";
+            else if(e.key == '=' || e.key == 'Enter') operation = "equal";
           // code block
           console.log('+++++++++ OPERATION +++++++++++');
           console.log("The key was: " + e.key);
-          console.log(operation);
           document.getElementById(operation).click();
-          break;
-        default:
-          // code block
       } 
 });
 
